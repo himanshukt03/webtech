@@ -1,0 +1,249 @@
+:root {
+    --dark-bg: #121212;
+    --light-bg: #ffffff;
+    --primary-color: #6200ea;
+    --secondary-color: #03dac6;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.main {
+    width: 100%;
+    max-width: 800px;
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background: var(--primary-color);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background: var(--secondary-color);
+}
+
+.task-list h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f8f8f8;
+    color: var(--text-dark);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+#tasks .task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task .content {
+    flex: 1;
+}
+
+.task .content .text {
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    width: 100%;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.task .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task .actions button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.task .actions button:hover {
+    background: var(--secondary-color);
+}
+
+.error {
+    color: #ff3860;
+    margin-top: 10px;
+    text-align: center;
+}
+.task.completed .text {
+    text-decoration: line-through;
+}
+
+/* ... (keep the existing CSS) ... */
+
+.task-list {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tasks {
+    display: grid;
+    gap: 15px;
+}
+
+#tasks .task {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#tasks .task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task .content {
+    flex: 1;
+}
+
+.task .content .text {
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.task .content .text:focus {
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+.task .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task .actions button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.task .actions button:hover {
+    background: var(--secondary-color);
+}
+
+.task.completed .text {
+    text-decoration: line-through;
+    color: #888;
+}
+.error {
+    color: #ff3860;
+    background-color: #feecf0;
+    border: 1px solid #ff3860;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #23d160;
+    background-color: #effaf3;
+    border: 1px solid #23d160;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
