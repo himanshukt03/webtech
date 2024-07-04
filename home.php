@@ -17,7 +17,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
     <header>
-        <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
+        <h1>Welcome <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
         <nav>
             <a href="logout.php">Logout</a>
         </nav>
